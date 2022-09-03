@@ -1,78 +1,68 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200, 300, 400, 500, 600, 700, 800, 900&display=swap');
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Write CSS code below */
 body{
-    background: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: #add8e6;
 }
-.container{
-    position: relative;
-    width: 100%;
-    max-width:1000px;
-    min-height: 1000px;
-    background: #fff;
-    margin: 50px;
+
+.main-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    box-shadow: 0 35px 55px rgba(0,0,0,0.1);    
-}
-.container .left_side{
-    position: relative;
-    background: #003147;
-    padding: 40px;
-}
-.profileText{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-.profileText .imgBx{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.profileText .imgBx img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.profileText h2{
+    grid-template-columns: 300px 700px;
+    min-height: 1000px;
+    width: 90%;
+    margin: 20px auto;
+  }
+.left-section{
+    grid-column: span 1;
+    background-color: #003147;
     color: #fff;
-    font-size: 1.5em;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
-    line-height: 1.4em;
 }
-.profileText h2 span{
-    font-size: 0.8em;
-    font-weight: 300;
+.right-section{
+    grid-column: span 1 / span 2;
+    background-color: #fff;
+}
+
+.left-content{
+    padding: 1rem;
+}
+.profile-image{
+    display: block;
+    margin: auto;
+    border: 5px white solid;
+    border-radius: 30%;
+    width: 60%;
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02px;
+}
+.designation{
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+.description{
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1rem 1rem;
+}
+.social-media{
+    display: flex;
+    justify-content: space-evenly;
 }
 .contactInfo{
-    padding-top: 40px;
-}
-.title{
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+    padding: 5%;
 }
 .contactInfo ul{
     position: relative;
@@ -93,138 +83,68 @@ body{
     color: #fff;
     font-weight: 300;
 }
-.contactInfo.education li{
-    margin-bottom: 15px;
+.skills{
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0.5rem;
 }
-.contactInfo.education h5{
-    color: #03a9f4;
-    font-weight: 500;
+.skill-name{
+    font-size: 0.65rem;
+    font-weight: 0.65rem;
+    text-align: left;
+    padding-bottom: 0.5rem;
 }
-.contactInfo.education h4:nth-child(2){
-    color: #fff;
-    font-weight: 500;
+.progress-bar {
+    border: 1px white solid;
+    height: 4px;
+  }
+  
+.progress-bar>div {
+    border: 1px white solid;
+    background-color: #fff;
+    height: 4px;
 }
-.contactInfo.education h4{
-    color: #fff;
-    font-weight: 300;
-}
-.contactInfo.language .percentage{
-    position: relative;
-    width: 100%;
-    height: 6px;
-    background: #081921;
-    display: block;
-    margin-top: 5px;
-}
-.contactInfo.language .percentage div{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #03a9f4;
+.skill-item{
+    padding: 5px;
 }
 
-.container .right_side{
-    position: relative;
-    background: #fff;
-    padding: 40px;
+.right-main-content{
+    padding: 2rem 3rem;
 }
-.about{
-    margin-bottom: 50px;
-}
-.about:last-child{
-    margin-bottom: 0px;
-}
-.title2{
-    color: #003147;
+.right-title{
     text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem;
     letter-spacing: 1px;
-    margin-bottom: 10px;
 }
-p{
-    color: #333;
+.para{
+    padding: 0.5rem;
 }
-.about .box{
+.box{
     display: flex;
-    flex-direction: row;
-    margin: 20px 0;
 }
-.about .box .year_company{
+.box>.text{
+    padding: 0.5rem;
+}
+.box>.text{
+    padding: 0.5rem;
+}
+h6{
+    margin-top: 10px;
+}
+.box .year{
     min-width: 150px;
 }
-.about .box .year_company h5{
-    text-transform: uppercase;
-    color: #848c90;
-    font-weight: 600;
-}
-.about .box .text h4{
-    text-transform: uppercase;
-    color: #2a7da2;
-    font-size: 16px;
-}
-.skills .box{
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    justify-content: center;
-    align-items: center;
-}
-.skills .box h4{
-    text-transform: uppercase;
-    color: #848c99;
-    font-weight: 500;
-}
-.skills .box .percent{
-    position: relative;
-    width: 100%;
-    height: 10px;
-    background: #f0f0f0;
-}
-.skills .box .percent div{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #03a9f4;
-}
-.interest ul{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
-.interest ul li{
-    list-style: none;
-    color: #333;
-    font-weight: 500;
-    margin: 10px 0;
-}
-.interest ul li .fa{
-    color: #03a9f4;
-    font-size: 18px;
-    width: 20px;
+.projects{
+    padding: 0.5rem;
 }
 
-@media (max-width: 1000px){
-    .container{
-        margin: 10px;
-        grid-template-columns: repeat(1,1fr);
-    }
-    .interest ul{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-
-@media (max-width: 600px){
-    .about .box{
-        flex-direction: column;
-    }
-    .about .box .year_company{
-        margin-bottom: 5px;
-    }
-    .interest ul{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .skills .box{
-        grid-template-columns: repeat(1,1fr);
+@media (max-width: 673px){
+    .main-content {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        min-height: 1000px;
     }
 }
